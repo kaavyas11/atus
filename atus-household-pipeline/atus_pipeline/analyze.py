@@ -1,14 +1,7 @@
 """Weighted household-composition estimates with bootstrap uncertainty.
 
 Every estimate is a ratio  sum(w * numerator) / sum(w * denominator)  over
-households, where w is the respondent's survey weight (normalised within
-year so each year contributes equally to pooled estimates). Uncertainty comes
-from a nonparametric bootstrap that resamples households with replacement.
-
-Limitation: a bootstrap over final weights ignores the ATUS's stratified
-design and weight calibration. BLS publishes replicate weights (the
-"atuswgts" file) for design-based variance; the bootstrap here is a transparent
-approximation, so intervals should be read as indicative, not exact.
+households, where w is the respondent's survey weight. There are some limitations with the boostrapping.
 """
 from __future__ import annotations
 
